@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+}
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h1 {
+color: #333;
+}
+
+p {
+color: #555;
+}
+
+.button {
+display: inline-block;
+padding: 10px 20px;
+margin: 20px 0;
+text-decoration: none;
+background-color: #007BFF;
+color: #fff;
+border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Welcome to Brighter Tomorrow Foundation</h1>
+
+<p>Dear {!Receiving_User.FirstName},</p>
+
+<p>We hope this email finds you well! On behalf of the entire team at Brighter Tomorrow Foundation, we are thrilled
+to welcome you as a valued member of our community. Your recent contribution is a meaningful step towards making
+a positive impact, and we are grateful for your support.</p>
+
+<h2>Donor Onboarding:</h2>
+
+<p>We've taken the liberty of creating a donor profile for you in our system. This profile will help us keep you
+informed about our initiatives, events, and the impact of your contributions. If you have any changes to your
+contact information or specific preferences, please feel free to let us know. </p>
+
+<p>To get started, go to {!Community_Url}</p>
+<p>Username: {!Receiving_User.Username}<p>
+
+<h2>Thank You:</h2>
+
+<p>We want to express our sincere gratitude for your generosity. Your support allows us to focused on providing education
+and resources to underprivileged children world wide. Every donation brings us one step closer to achieving our mission, and
+we couldn't do it without supporters like you.</p>
+
+<h2>Stay Connected:</h2>
+
+<p>To ensure that you stay updated on our latest activities, events, and success stories, we encourage you to
+connect with us on social media. Follow us on LinkedIn for real-time updates and a
+behind-the-scenes look at the work we do.</p>
+
+<h2>Get Involved:</h2>
+
+<p>We believe in the power of community and invite you to explore opportunities to get more involved. Whether it's
+attending events, volunteering your time, or sharing your thoughts and ideas, your participation makes a
+difference.</p>
+
+<h2>Communication Preferences:</h2>
+
+<p>We want to respect your preferences. If you have specific communication preferences or topics you're
+particularly interested in.</p>
+
+<p>Once again, thank you for joining us on this journey. Together, we can create positive change and make a
+lasting impact.</p>
+
+<p>If you have any questions or if there's anything specific you'd like to know more about, please don't hesitate
+to reach out.</p>
+
+<p>Thank you for your support and welcome to the Brighter Tomorrow Foundation family!</p>
+
+<p>Warm regards,</p>
+<p>{!Organization.Name}</p>
+
+</div>
+</body>
+
+</html>

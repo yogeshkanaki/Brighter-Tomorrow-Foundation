@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Generous Donation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff7ec;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e67e22;
+            text-align: justify;
+        }
+
+        p {
+            color: #6c757d; 
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .donation-details {
+            background-color: #ffd8a6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Generous Donation!</h1>
+        <h4>Dear {!User.Name},</h4>
+        <p>On behalf of Brighter Tomorrow Foundation (BTF), we want to express our deepest gratitude for your incredibly generous donation of {!Opportunity.Amount}. We wanted to personally thank you for making a difference, and Brighter Tomorrow Foundation values your support tremendously.</p>
+        
+        <p>With your contribution, we are one step closer to accomplishing focused on providing education and resources to underprivileged children worldwid. To keep you informed about the progress and impact of your donation, we will be sending periodic updates. We want you to see firsthand the positive outcomes your support is helping us achieve.</p>
+        
+        <div class="donation-details">
+            <p><strong>Donation Amount:</strong> {!Opportunity.Amount}</p>
+        </div>
+        
+        <p>Thank you again for your support!</p>
+        <p class="footer">Best regards,<br>The Brighter Tomorrow Foundation Team</p>
+    </div>
+</body>
+</html>
