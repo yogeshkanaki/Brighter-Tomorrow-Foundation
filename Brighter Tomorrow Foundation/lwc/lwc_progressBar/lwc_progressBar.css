@@ -1,0 +1,17 @@
+.donation-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.left {
+  order: 1;
+}
+
+.right {
+  order: 2;
+}
+
+lightning-progress-bar {
+  margin-top: 8px;
+}

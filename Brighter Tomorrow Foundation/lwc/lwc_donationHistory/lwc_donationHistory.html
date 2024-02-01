@@ -1,0 +1,94 @@
+<template>
+    <div>
+        <lightning-card>
+
+            <div class="slds-m-around_medium">
+                <c-xlsx-main header-list={xlsHeader} filename={filename} worksheet-name-list={workSheetNameList}
+                    sheet-data={xlsData}></c-xlsx-main>
+            </div>
+
+            <div slot="actions" class="slds-clearfix">
+
+                <lightning-button variant="brand" label="Export as Excel" class="slds-m-right_x-small slds-float_right"
+                    title="Export Filtered Data" onclick={exportFilteredData}>
+                </lightning-button>
+
+            </div>
+
+            <div class="slds-grid slds-wrap slds-p-around_medium">
+                <div class="slds-col slds-size_5-of-12 slds-p-around_medium">
+                    <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small"
+                        placeholder="Search" label="Search" value={searchKey}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_5-of-12 slds-p-around_medium">
+                    <lightning-slider label="Amount" value={amount} onchange={handleAmountChange}
+                        max="10000000"></lightning-slider>
+                </div>
+                <div class="slds-col slds-size_2-of-12">
+                    <br /><br />
+                    <lightning-button variant="neutral" label="Reset Filters"
+                        class="slds-m-right_x-small slds-float_right" title="Reset Filters" onclick={handleReset}>
+                    </lightning-button>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-gutters">
+
+                <div class="slds-col slds-size_12-of-12">
+
+                    <lightning-tabset active-tab-value={activeTab}>
+                        <div class="slds-m-around_x-small">
+                            <lightning-tab label="Donations" value="1" onactive={handleActive}>
+
+                                <lightning-datatable key-field="Id" sorted-by={sortBy} sorted-direction={sortDirection}
+                                    onsort={doSortingMember} data={OppList} column-widths-mode="fixed"
+                                    suppress-bottom-bar show-row-number-column row-number-offset={rowOffset}
+                                    columns={Columns} onrowaction={handleRowAction} onrowselection={onRowSelection}
+                                    selected-rows={setSelectedRows} hide-checkbox-column="true">
+                                </lightning-datatable>
+
+                                <template if:true={error}>
+                                    {error}
+                                </template>
+
+                                <lightning-card>
+                                    <div class="nav-buttons">
+                                        <p class="slds-m-vertical_medium content">
+                                            Displaying {startingRecord} to {endingRecord} of
+                                            {totalRecountCount}
+                                            records.
+                                            Page {page} of {totalPage}.
+                                        </p>
+                                        <lightning-layout>
+                                            <lightning-layout-item>
+                                                <lightning-button label="Previous" icon-name="utility:chevronleft"
+                                                    onclick={previousHandler}>
+                                                </lightning-button>
+                                            </lightning-layout-item>
+                                            <lightning-layout-item flexibility="grow">
+                                            </lightning-layout-item>
+                                            <lightning-layout-item>
+                                                <lightning-button label="Next" icon-name="utility:chevronright"
+                                                    icon-position="right" onclick={nextHandler}>
+                                                </lightning-button>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                    </div>
+                                </lightning-card>
+                            </lightning-tab>
+                        </div>
+                    </lightning-tabset>
+                </div>
+            </div>
+
+            <div slot="footer" class="slds-clearfix">
+
+                <lightning-button variant="brand" label="Download Excel" class="slds-m-right_x-small slds-float_right"
+                    title="Export Filtered Data" onclick={exportFilteredData}>
+                </lightning-button>
+
+            </div>
+        </lightning-card>
+    </div>
+</template>

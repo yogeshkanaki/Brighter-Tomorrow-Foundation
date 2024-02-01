@@ -1,0 +1,147 @@
+.card-container {
+  display: flex;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 8px;
+  height: 120px !important;
+}
+
+.logo {
+  text-align: left;
+}
+
+.number {
+  text-align: right;
+  font-size: 2rem;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.footer {
+  color: white;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: white;
+}
+
+.container-title {
+  font-size: 16px;
+  font-weight: thin;
+  margin-bottom: 10px;
+}
+
+.card-container1 {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.record-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.record-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.card1 {
+  width: 52% !important;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.timeline {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.logo-column {
+  align-items: center;
+}
+
+.logo-container {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo1 {
+  width: 20px;
+  height: 20px;
+}
+
+.event-column {
+  flex-grow: 1;
+}
+
+.event-badge {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-time {
+  font-size: 12px;
+  color: #888;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.description {
+  margin-bottom: 5px;
+}
+
+.attractive-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4b6456;
+  margin-bottom: 10px;
+}
+
+.attractive-text {
+  font-size: 18px;
+  color: #4b6456;
+}
+
+.pdfbtn {
+  border-radius: 5px;
+  padding: 4px 8px 4px 8px;
+  color: white;
+  background-color: #4b6456;
+}

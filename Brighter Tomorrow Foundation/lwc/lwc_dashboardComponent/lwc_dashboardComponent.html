@@ -1,0 +1,152 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div style="width: 50%; margin-top:1.7rem;">
+            <div style="height: 50%;">
+                <div style="width: 50%; float: left;">
+                    <div class="card slds-m-left_x-small">
+                        <div class="logo">
+                            <lightning-icon icon-name="utility:clock" class="slds-cell-wrap"></lightning-icon>
+                        </div>
+                        <div class="number" style="color:#1e2443">
+                            {todayOppCount}
+                        </div>
+                        <div class="label" style="color:#1e2443">
+                            Today's Donations
+                        </div>
+                        <div class="footer" style="background-color: #1e2443;">
+                            <a href="#" class="download-link"></a>
+                            <span>$<lightning-formatted-number value={todayTotalAmount}
+                                    currency-code="USD"></lightning-formatted-number></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 50%; float: left;">
+                    <div class="card">
+                        <div class="logo">
+                            <lightning-icon icon-name="utility:touch_action" class="slds-cell-wrap"></lightning-icon>
+                        </div>
+                        <div class="number" style="color:#1e2443">
+                            {totalOpportunity}
+                        </div>
+                        <div class="label" style="color:#1e2443">
+                            Total Donations
+                        </div>
+                        <div class="footer" style="background-color: #1e2443;">
+                            <a href="#" class="download-link"></a>
+                            <span>$<lightning-formatted-number value={totalOppDonations}
+                                    currency-code="USD"></lightning-formatted-number></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 50%;">
+                <div class="big-heading" style="padding: 0.2rem; text-align: center; margin-top: 9rem;">
+                    <div style="width: 50%; float: left;">
+                        <div class="card slds-m-left_x-small">
+                            <div class="logo">
+                                <lightning-icon icon-name="utility:collection_alt"
+                                    class="slds-cell-wrap"></lightning-icon>
+                            </div>
+                            <div class="number" style="color:#1e2443">
+                                {projectCount}
+                            </div>
+                            <div class="label" style="color:#1e2443">
+                                Total Projects
+                            </div>
+                            <div class="footer" style="background-color: #1e2443;">
+                                <a href="#" class="download-link"></a>
+                                <span>$<lightning-formatted-number value={projectTotalAmount}
+                                        currency-code="USD"></lightning-formatted-number></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 50%; float: left;">
+                        <div class="card">
+                            <div class="logo">
+                                <lightning-icon icon-name="utility:hierarchy" class="slds-cell-wrap"></lightning-icon>
+                            </div>
+                            <div class="number" style="color:#1e2443">
+                                $<lightning-formatted-number value={totalOppDonations}
+                                    currency-code="USD"></lightning-formatted-number>
+                            </div>
+                            <div class="label" style="color:#1e2443">
+                                Gross Lifetime Value
+                            </div>
+                            <div class="footer" style="background-color: #1e2443;">
+                                <span class="download-link">Paid</span>
+                                <span>$<lightning-formatted-number value={totalPaymentsMade}
+                                        currency-code="USD"></lightning-formatted-number></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 50%;">
+            <div>
+                <span style="font-size:large;">Impact Programs</span>
+                <div class="card-container1">
+                    <ul class="record-list">
+                        <template for:each={allProjects} for:item="project">
+                            <li class="record-item" key={project.Id}>
+                                <div class="timeline">
+                                    <div class="logo-column">
+                                        <div class="logo-container">
+                                            <lightning-icon icon-name="standard:event" class=""></lightning-icon>
+                                        </div>
+                                    </div>
+                                    <div class="event-column">
+                                        <div class="event-badge">
+                                            <span class="slds-badge">{project.Status__c}</span>
+                                            <span class="date-time">When &nbsp;
+                                                <lightning-formatted-date-time value={project.Start_Date__c}
+                                                    day="2-digit" month="2-digit" year="2-digit">
+                                                </lightning-formatted-date-time> |&nbsp;
+                                                <lightning-formatted-date-time value={project.End_Date__c} day="2-digit"
+                                                    month="2-digit" year="2-digit">
+                                                </lightning-formatted-date-time>
+                                            </span>
+                                        </div>
+                                        <div class="title">
+                                            {project.Name}
+                                        </div>
+                                        <div class="description">
+                                            <template if:true={project.Budget_Amount__c}>
+                                                <span><b>Budget:</b> $<lightning-formatted-number
+                                                        value={project.Budget_Amount__c}
+                                                        currency-code="USD"></lightning-formatted-number></span>
+                                            </template><br />
+
+                                            <template if:true={project.Amount__c}>
+                                                <span><b>Actual Expenditure:</b> $<lightning-formatted-number
+                                                        value={project.Amount__c}
+                                                        currency-code="USD"></lightning-formatted-number></span>
+                                            </template>
+                                            <br />
+                                            <template if:true={project.Impact_Metrics__c}>
+                                                <span><b>Impact Metrics:</b>
+                                                    <p>{project.Impact_Metrics__c}</p>
+                                                </span>
+                                            </template>
+                                            <br />
+
+                                            <p>{project.Description__c }</p>
+
+                                            <p style="margin-top: 5px;">
+                                                <b>Location</b><br />{project.Address__Street__s},
+                                                {project.Address__City__s}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </template>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,98 @@
+.container {
+  height: 100px;
+  overflow-y: scroll;
+}
+.containers {
+  height: 360px;
+  overflow-y: scroll;
+}
+.box1 {
+  width: 300px;
+  border: 1px solid #000000;
+  margin: 20px 100px 20px 15px;
+  height: 90%;
+}
+.box2 {
+  width: 1200px;
+  border: 1px solid #000000;
+  margin: 20px 10px 20px 55px;
+  height: 90%;
+}
+
+.box3 {
+  width: 1200px;
+  border: 1px solid #000000;
+  margin: 70px 20px 70px 25px;
+  height: 55%;
+}
+.top {
+  border-top: thin solid;
+  border-color: black;
+}
+
+.bottom {
+  border-bottom: thin solid;
+  border-color: black;
+}
+
+.left {
+  border-left: thin solid;
+  border-color: black;
+}
+
+.right {
+  border-right: thin solid;
+  border-color: black;
+}
+.detail-card {
+  overflow-y: scroll;
+  height: 81%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-bottom: 22px;
+  margin-top: 90px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.slds-card {
+  height: 100% !important;
+  min-height: 12rem;
+}
+
+.card-height {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+lightning-datatable {
+  min-height: 7rem;
+}
+
+article {
+  height: 150% !important;
+}
+
+.item-center {
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nav-buttons {
+  background-color: #fff;
+}
+
+.spanCss {
+  font-size: medium;
+  font-weight: 600;
+}
+
+.spanTitle {
+  font-size: medium;
+  font-weight: bold;
+}

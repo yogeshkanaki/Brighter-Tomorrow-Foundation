@@ -1,0 +1,43 @@
+.custom-footer {
+  background-color: #1e2443;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.custom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.custom-col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.custom-col:last-child {
+  margin-right: 0;
+}
+
+.custom-col h3 {
+  color: #ffd700;
+}
+
+.custom-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-col a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.custom-bottom-bar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.line-height {
+  line-height: 1.5rem;
+}
